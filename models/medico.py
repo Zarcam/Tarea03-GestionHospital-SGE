@@ -4,14 +4,12 @@ class medico(models.Model):
     _name = 'gestion_hospital.medico'
     _description = 'Medico del hospital'
 
-    nombre = fields.Char(
-        string='Nombre del paciente',
-    )
-
-    apellidos = fields.Char(
-        string='Apellidos del paciente',
+    nombre_apellidos = fields.Char(
+        string='Nombre y apellidos del paciente',
     )
 
     num_colegiado = fields.Integer(
         string='Numero de colegiado'
     )
+
+    diagnostico = fields.One2many('gestion_hospital', 'medico')

@@ -1,5 +1,20 @@
 <odoo>
   <data>
-    
+    <record model="ir.actions.act_window" id="action_lista_pacientes">
+      <field name="name">Listado de pacientes del hospital - ARG</field>
+      <field name="res_model">gestion_hospital.paciente</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_paciente" model="ir.ui.view">
+      <field name="name">Pacientes</field>
+      <field name="model">gestion_hospital.paciente</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre_apellido" />
+          <field name="sintomas" />
+        </tree>
+      </field>
+    </record>
   </data>
 </odoo>

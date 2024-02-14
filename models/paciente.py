@@ -10,12 +10,12 @@ class paciente(models.Model):
         string='Nombre y apellidos del paciente',
     )
 
-    sintomas = fields.Char(
+    sintomas = fields.Text(
         string='Sintomas del paciente'
     )
     
     diagnostico_ids = fields.One2many(
-        string='diagnostico_ids',
+        string='Diagnosticos',
         comodel_name='gestion_hospital.diagnostico',
         inverse_name='paciente_id',
     )

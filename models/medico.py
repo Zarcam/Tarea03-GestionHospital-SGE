@@ -13,7 +13,7 @@ class medico(models.Model):
     )
 
     diagnostico_ids = fields.One2many(
-        string='diagnostico_ids',
+        string='Diagnosticos',
         comodel_name='gestion_hospital.diagnostico',
         inverse_name='medico_id',
     )

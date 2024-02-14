@@ -6,6 +6,10 @@
       <field name="view_mode">tree,form</field>
     </record>
 
+    <menuitem name="Gestor Hospital" id="pacientes_menu_root"/>
+    <menuitem name="Opciones Gestion Hospital" id="gestion_hospital_menu_1" parent="pacientes_menu_root"/>
+    <menuitem name="Ver pacientes" id="gestion_hospital_menu_1_list" parent="gestion_hospital_menu_1" action="action_lista_pacientes"/>
+
     <record id="view_paciente" model="ir.ui.view">
       <field name="name">Pacientes</field>
       <field name="model">gestion_hospital.paciente</field>

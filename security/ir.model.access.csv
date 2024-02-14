@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_gestion_hospital_gestion_hospital,gestion_hospital.gestion_hospital,model_gestion_hospital_paciente,base.group_user,1,1,1,1
+access_gestion_hospital_paciente,gestion_hospital.paciente,model_gestion_hospital_paciente,base.group_user,1,1,1,1
+access_gestion_hospital_medico,gestion_hospital.medico,model_gestion_hospital_medico,base.group_user,1,1,1,1
+access_gestion_hospital_diagnostico,gestion_hospital.diagnostico,model_gestion_hospital_diagnostico,base.group_user,1,1,1,1

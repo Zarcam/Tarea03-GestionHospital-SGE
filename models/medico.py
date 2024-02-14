@@ -5,7 +5,7 @@ class medico(models.Model):
     _description = 'Medico del hospital'
 
     nombre_apellidos = fields.Char(
-        string='Nombre y apellidos del paciente',
+        string='Nombre y apellidos del medico',
     )
 
     num_colegiado = fields.Integer(

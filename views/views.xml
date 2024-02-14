@@ -6,17 +6,55 @@
       <field name="view_mode">tree,form</field>
     </record>
 
+    <record model="ir.actions.act_window" id="action_lista_medicos">
+      <field name="name">Listado de medicos del hospital - ARG</field>
+      <field name="res_model">gestion_hospital.medico</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_lista_diagnosticos">
+      <field name="name">Listado de diagnosticos del hospital - ARG</field>
+      <field name="res_model">gestion_hospital.diagnostico</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
     <menuitem name="Gestor Hospital" id="pacientes_menu_root"/>
     <menuitem name="Opciones Gestion Hospital" id="gestion_hospital_menu_1" parent="pacientes_menu_root"/>
-    <menuitem name="Ver pacientes" id="gestion_hospital_menu_1_list" parent="gestion_hospital_menu_1" action="action_lista_pacientes"/>
+
+    <menuitem name="Ver pacientes" id="gestion_hospital_menu_1_list_pacientes" parent="gestion_hospital_menu_1" action="action_lista_pacientes"/>
+    <menuitem name="Ver medicos" id="gestion_hospital_menu_1_list_medicos" parent="gestion_hospital_menu_1" action="action_lista_medicos"/>
+    <menuitem name="Ver diagnosticos" id="gestion_hospital_menu_1_list_diagnosticos" parent="gestion_hospital_menu_1" action="action_lista_diagnosticos"/>
 
     <record id="view_paciente" model="ir.ui.view">
       <field name="name">Pacientes</field>
       <field name="model">gestion_hospital.paciente</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="nombre_apellido" />
+          <field name="nombre_apellidos" />
           <field name="sintomas" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_medico" model="ir.ui.view">
+      <field name="name">Medicos</field>
+      <field name="model">gestion_hospital.medico</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre_apellidos" />
+          <field name="num_colegiado" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_paciente" model="ir.ui.view">
+      <field name="name">Diagnosticos</field>
+      <field name="model">gestion_hospital.diagnostico</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="paciente_id" />
+          <field name="medico_id" />
+          <field name="descripcion"/>
         </tree>
       </field>
     </record>

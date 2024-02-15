@@ -22,7 +22,10 @@
 
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
-    ],    
+        'views/view_medico.xml',
+        'views/view_paciente.xml',
+        'views/view_menuitems.xml',
+        'views/view_diagnostico.xml',
+    ],
 }
 

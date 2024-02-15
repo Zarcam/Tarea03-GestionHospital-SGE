@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_lista_diagnosticos">
+            <field name="name">Listado de diagnosticos del hospital - ARG</field>
+            <field name="res_model">gestion_hospital.diagnostico</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_diagnostico" model="ir.ui.view">
+            <field name="name">Diagnosticos</field>
+            <field name="model">gestion_hospital.diagnostico</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="paciente_id" />
+                    <field name="medico_id" />
+                    <field name="descripcion" />
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

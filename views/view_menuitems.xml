@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+    <menuitem name="Gestor Hospital" id="pacientes_menu_root" />
+    <menuitem name="Opciones Gestion Hospital" id="gestion_hospital_menu_1"
+      parent="pacientes_menu_root" />
+
+    <menuitem name="Ver pacientes" id="gestion_hospital_menu_1_list_pacientes"
+      parent="gestion_hospital_menu_1" action="action_lista_pacientes" />
+    <menuitem name="Ver medicos" id="gestion_hospital_menu_1_list_medicos"
+      parent="gestion_hospital_menu_1" action="action_lista_medicos" />
+    <menuitem name="Ver diagnosticos" id="gestion_hospital_menu_1_list_diagnosticos"
+      parent="gestion_hospital_menu_1" action="action_lista_diagnosticos" />
+  </data>
+</odoo>

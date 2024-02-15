@@ -9,7 +9,7 @@ class medico(models.Model):
     )
 
     num_colegiado = fields.Integer(
-        string='Numero de colegiado'
+        string='Numero de colegiado',
     )
 
     diagnostico_ids = fields.One2many(

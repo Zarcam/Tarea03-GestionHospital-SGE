@@ -11,7 +11,7 @@ class paciente(models.Model):
     )
 
     sintomas = fields.Text(
-        string='Sintomas del paciente'
+        string='Sintomas del paciente',
     )
     
     diagnostico_ids = fields.One2many(

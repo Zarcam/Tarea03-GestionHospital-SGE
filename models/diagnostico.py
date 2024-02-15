@@ -16,8 +16,6 @@ class diagnostico(models.Model):
         ondelete='cascade',
     )
     
-    
-
     descripcion = fields.Char(
         string='Descripcion del diagnostico'
     )

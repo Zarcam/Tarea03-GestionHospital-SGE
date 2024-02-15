@@ -9,7 +9,7 @@ class diagnostico(models.Model):
         comodel_name='gestion_hospital.paciente',
         ondelete='cascade',
     )
-  
+
     medico_id = fields.Many2one(
         string='Medico',
         comodel_name='gestion_hospital.medico',

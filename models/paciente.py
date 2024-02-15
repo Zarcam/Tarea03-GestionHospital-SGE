@@ -5,7 +5,8 @@ from odoo import models, fields
 class paciente(models.Model):
     _name = 'gestion_hospital.paciente'
     _description = 'Paciente del hospital'
-
+    _rec_name = 'nombre_apellidos'
+    
     nombre_apellidos = fields.Char(
         string='Nombre y apellidos del paciente',
     )
